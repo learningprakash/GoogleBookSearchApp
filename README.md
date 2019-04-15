@@ -34,3 +34,11 @@ Once the app is successfully running you should be able to see the application r
 [nodemon] starting `node app.js`
 Running on port 4000
 ```
+
+
+To access the Application, Please open this link in the browser
+
+```
+http://localhost:4000/api/books
+
+```
