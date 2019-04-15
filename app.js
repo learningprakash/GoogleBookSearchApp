@@ -75,7 +75,7 @@ function mostRecentPublishDate (req, callback){
       qs.push(['maxResults', 1]);
       qs.push(['orderBy', 'newest']);
       apiCallFromRequest.callApi(qs, function (resp) {
-      recentDate = (resp.items[0].volumeInfo.publishedDate);
+      recentDate = resp.hasOwnProperty('items') ? resp.items[0].volumeInfo.publishedDate : '';
       callback(recentDate);
       });
     }

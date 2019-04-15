@@ -73,10 +73,10 @@
          <% } %>    
 
         <div class="books">
-            <% if(data.totalItems > 0) { %>    
-                <h3> Search results </h3>
-                <% for(let i=0; i < data.items.length; i++) { %>
-            <div class="card card-body bg-light">
+          <% if(data.totalItems > 0) { %>    
+            <h3> Search results </h3>
+            <% for(let i=0; i < data.items.length; i++) { %>
+             <div class="card card-body bg-light">
                 <div class="row">
                     <div class="col-md-2">
                       <% if(data.items[i].volumeInfo.hasOwnProperty('imageLinks')) { %> 
@@ -106,8 +106,10 @@
                         </p>
                     </div>
                 </div>
-            </div>
+             </div>
             <% } %>
+          <%} else { %>
+            There is no data fount for search please try again. Suggestion: Java, Algorithm, Python
           <% } %>
         </div>
 
